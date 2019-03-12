@@ -6,9 +6,7 @@ app.get('/', (req, res) => {
   res.send('Hellow World')
 })
 
-app.get('/api/avatars', (req, res) => {
-  res.send('avatars URL')
-})
+app.use(express.static('public'))
 
 app.listen(port, () => console.log('Listening in port :' + port))
 
