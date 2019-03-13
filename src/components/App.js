@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import LogIn from './LogInComponent'
 import '../App.css'
+import { Container } from 'semantic-ui-react'
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Container>
         <header className="App-header">
           <LogIn />
         </header>
-      </div>
+      </Container>
     );
   }
 }

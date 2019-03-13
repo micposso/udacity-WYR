@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux'
 import App from './components/App';
+import 'semantic-ui-css/semantic.min.css'
 
 function reducer (state='', action) {
   if (action.type === 'changeState') {
