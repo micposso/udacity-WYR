@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import LogIn from './LogInComponent'
 import '../App.css'
-import { Container } from 'semantic-ui-react'
+import { Container, Grid  } from 'semantic-ui-react'
 
 
 class App extends Component {
   render() {
     return (
-      <Container>
-        <header className="App-header">
+      <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle'>
           <LogIn />
-        </header>
-      </Container>
+      </Grid >
     );
   }
 }
