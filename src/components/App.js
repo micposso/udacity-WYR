@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { handleInitialData } from '../actions/shared'
 import { Grid } from 'semantic-ui-react'
 import LogIn from './LogInComponent'
 
-
 class App extends Component {
+  componentDidMount() {
+    this.props.dispatch(handleInitialData())
+  }
   render() {
     return (
       <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle'>
@@ -13,4 +17,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect()(App);

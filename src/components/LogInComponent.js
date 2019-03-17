@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, Grid, Header, Image, Segment, Dropdown } from "semantic-ui-react";
+import { Button, Form, Grid, Header, Segment, Dropdown } from "semantic-ui-react";
 import { GiPerspectiveDiceSixFacesRandom  } from "react-icons/gi";
 
 
