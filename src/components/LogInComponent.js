@@ -35,7 +35,7 @@ const LogIn = () => (
       <Grid.Column style={{ maxWidth: `${styles.widths.mainContainer}` }}>
         <Form size='large'>
           <Segment stacked>
-            <div><GiPerspectiveDiceSixFacesRandom size={100} color="orange" /></div>
+            <div><GiPerspectiveDiceSixFacesRandom size={60} color="orange" /></div>
             <Header as='h2' color='orange' textAlign='center'>
               The Questions Game
             </Header>
