@@ -1,14 +1,12 @@
-import React, { Component } from "react";
+import React from 'react';
 import { Button, Form, Grid, Header, Image, Segment, Dropdown } from "semantic-ui-react";
+import { GiPerspectiveDiceSixFacesRandom  } from "react-icons/gi";
+
 
 const styles = {
-  layout: {},
-  width: {
+  widths: {
     mainContainer: 450,
-    column: 450
-  },
-  height: {
-    mainContainer: 400
+    icon: 200
   },
   spacing: {
     dropDown: 5
@@ -26,11 +24,6 @@ const userOptions = [
 
 const LogIn = () => (
   <div className='login-form'>
-    {/*
-      Heads up! The styles below are necessary for the correct render of this example.
-      You can do same with CSS, the main idea is that all the elements up to the `Grid`
-      below must have a height of 100%.
-    */}
     <style>{`
       body > div,
       body > div > div,
@@ -39,11 +32,12 @@ const LogIn = () => (
       }
     `}</style>
     <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle'>
-      <Grid.Column style={{ maxWidth: 450 }}>
+      <Grid.Column style={{ maxWidth: `${styles.widths.mainContainer}` }}>
         <Form size='large'>
           <Segment stacked>
-            <Header as='h2' color='teal' textAlign='center'>
-              <Image src='/logo.png' />The Questions Game
+            <div><GiPerspectiveDiceSixFacesRandom size={100} color="orange" /></div>
+            <Header as='h2' color='orange' textAlign='center'>
+              The Questions Game
             </Header>
             <Dropdown
               placeholder='Select Friend'
@@ -52,7 +46,7 @@ const LogIn = () => (
               options={userOptions}
               style={{marginBottom: `${styles.spacing.dropDown}%`}}
             />
-            <Button color='teal' fluid size='large'>
+            <Button color='orange' fluid size='large'>
               Login
             </Button>
           </Segment>

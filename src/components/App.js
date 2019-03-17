@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import LogIn from './LogInComponent'
-import '../App.css'
 import { Grid } from 'semantic-ui-react'
+import LogIn from './LogInComponent'
 
 
 class App extends Component {
