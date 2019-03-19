@@ -31,7 +31,6 @@ const userOptions = [
 
 class LogIn extends Component {
   render() {
-    console.log('This is the props: ', this.props);
     
     return (
       <div className="login-form">
@@ -78,9 +77,7 @@ class LogIn extends Component {
 //get user, userID, name and avartURL and push it into an array that you will pass to the Dropdown component as an options value.
 
 //problem the property users of the state it not getting through the mapStateToProps function
-function mapStateToProps({ users }) {
-  console.log('This is the data from the store: ', users);
-  
+function mapStateToProps({ usersReducer }) {  
   return {
     key: '',
     text: '',

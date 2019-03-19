@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './components/App'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import App from './components/App';
 import reducer from './reducers'
+import middleware from './middleware'
 import 'semantic-ui-css/semantic.min.css'
-import middleWare from './middleware'
 
-const store = createStore(reducer, middleWare)
+const store = createStore(reducer, middleware)
 
 ReactDOM.render(
   <Provider store={store}>

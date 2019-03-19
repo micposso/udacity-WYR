@@ -1,4 +1,4 @@
-import { formatQuestion } from './helpers'
+import formatQuestion from './helpers'
 
 let users = {
   sarahedo: {
