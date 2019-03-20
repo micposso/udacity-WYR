@@ -20,18 +20,17 @@ const styles = {
   }
 };
 
-const userOptions = [
-  {
-    key: "Jenny Hess",
-    text: "Jenny Hess",
-    value: "Jenny Hess",
-    image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
-  }
-];
-
 class LogIn extends Component {
   render() {
-    
+    const userOptions = [
+      {
+        key: "Jenny Hess",
+        text: "Jenny Hess",
+        value: "Jenny Hess",
+        image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
+      }
+    ];
+    console.log('One part of state', this.props)
     return (
       <div className="login-form">
         <style>{`
@@ -77,12 +76,13 @@ class LogIn extends Component {
 //get user, userID, name and avartURL and push it into an array that you will pass to the Dropdown component as an options value.
 
 //problem the property users of the state it not getting through the mapStateToProps function
-function mapStateToProps({ usersReducer }) {  
+function mapStateToProps({ usersReducer }) { 
+  const ids = Object.keys(usersReducer) 
   return {
-    key: '',
-    text: '',
-    value: '',
-    image: ''
+    id: ids,
+    text: ids.name,
+    value: ids.name,
+    image: ids.avatar
   };
 }
 
