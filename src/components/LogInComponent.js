@@ -20,7 +20,7 @@ const styles = {
   }
 };
 
-const userOptionsdd = [
+const userOptions = [
   {
     key: "Jenny Hess",
     text: "Jenny Hess",
@@ -70,7 +70,7 @@ class LogIn extends Component {
                   placeholder="Select Friend"
                   fluid
                   selection
-                  options={userOptionsdd}
+                  options={userOptions}
                   style={{ marginBottom: `${styles.spacing.dropDown}%` }}
                 />
                 <Button color="orange" fluid size="large">
