@@ -20,9 +20,21 @@ const styles = {
   }
 };
 
-const userOptions = [
+const userOptionsdd = [
   {
     key: "Jenny Hess",
+    text: "Jenny Hess",
+    value: "Jenny Hess",
+    image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
+  },
+  {
+    key: "Jenny Hessd",
+    text: "Jenny Hess",
+    value: "Jenny Hess",
+    image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
+  },
+  {
+    key: "Jenny Hesss",
     text: "Jenny Hess",
     value: "Jenny Hess",
     image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
@@ -31,7 +43,6 @@ const userOptions = [
 
 class LogIn extends Component {
   render() {
-    
     return (
       <div className="login-form">
         <style>{`
@@ -59,7 +70,7 @@ class LogIn extends Component {
                   placeholder="Select Friend"
                   fluid
                   selection
-                  options={userOptions}
+                  options={userOptionsdd}
                   style={{ marginBottom: `${styles.spacing.dropDown}%` }}
                 />
                 <Button color="orange" fluid size="large">
@@ -77,13 +88,10 @@ class LogIn extends Component {
 //get user, userID, name and avartURL and push it into an array that you will pass to the Dropdown component as an options value.
 
 //problem the property users of the state it not getting through the mapStateToProps function
-function mapStateToProps({ usersReducer }) {  
+function mapStateToProps({ usersReducer }) { 
   return {
-    key: '',
-    text: '',
-    value: '',
-    image: ''
-  };
+
+  }
 }
 
 export default connect(mapStateToProps)(LogIn)
