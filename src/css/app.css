@@ -1,0 +1,16 @@
+.ui.fluid.selection.dropdown {
+  margin: 0 0 20px 0;
+}
+
+.ui.stacked.segment, .ui.menu {
+  border-color: orange;
+}
+
+.dashboard-tabs .item {
+  width: 50%;
+}
+
+.login-form {
+  width: 50%;
+  margin: 0 auto;
+}
