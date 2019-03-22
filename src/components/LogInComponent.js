@@ -15,6 +15,16 @@ const userOptions = [
     value: "Jenny Hess",
     text: "Jenny Hess",
     image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
+  },
+  {
+    value: "Lora Smith",
+    text: "Lora Smith",
+    image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
+  },
+  {
+    value: "Rene Tout",
+    text: "Rene Tout",
+    image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
   }
 ];
 

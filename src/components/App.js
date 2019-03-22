@@ -1,24 +1,34 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { Grid } from 'semantic-ui-react'
-import '../css/app.css'
-import LogIn from './LogInComponent'
-import DashBoard from './DashBoardComponent'
-import { handleInitialData } from '../actions/shared'
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { Grid, Container } from "semantic-ui-react";
+import { handleInitialData } from "../actions/shared";
+import "../css/app.css";
+import Navigation from "./NavigationComponent";
+import LogIn from "./LogInComponent";
+import DashBoard from "./DashBoardComponent";
+import Questions from './QuestionsComponent'
+import PollResults from './PollResultsComponent'
 
 
 class App extends Component {
   componentDidMount() {
-    this.props.dispatch(handleInitialData())
+    this.props.dispatch(handleInitialData());
   }
   render() {
     return (
-      <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle'>
-          <LogIn />
-          <DashBoard />
-      </Grid>
+      <Container textAlign="center" verticalAlign="middle">
+        <Navigation />
+        <Grid>
+          <Grid columns={4}>
+            <PollResults />
+            <Questions />
+            <DashBoard />
+            <LogIn />
+          </Grid>
+        </Grid>
+      </Container>
     );
   }
 }
 
-export default connect()(App)
+export default connect()(App);

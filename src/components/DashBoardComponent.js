@@ -1,25 +1,35 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Tab } from 'semantic-ui-react'
-
+import { Tab } from "semantic-ui-react";
+import UserModule from "./UserModule";
 
 const panes = [
-  { menuItem: 'Tab 1', render: () => <Tab.Pane>Tab 1 Content</Tab.Pane> },
-  { menuItem: 'Tab 2', render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
-]
+  {
+    menuItem: "Unanswered Questions",
+    render: () => (
+      <Tab.Pane>
+        <UserModule />
+      </Tab.Pane>
+    )
+  },
+  {
+    menuItem: "Answered Questions",
+    render: () => (
+      <Tab.Pane>
+        <UserModule />
+      </Tab.Pane>
+    )
+  }
+];
 
 class DashBoard extends Component {
   render() {
-    return (
-      <Tab panes={panes} />
-    )
+    return <Tab panes={panes} className="dashboard-tabs" />;
   }
 }
 
-function mapStateToProps({ usersReducer, questionsReducer}) {
-  return {
-
-  }
+function mapStateToProps({ usersReducer, questionsReducer }) {
+  return {};
 }
 
-export default connect(mapStateToProps)(DashBoard)
+export default connect(mapStateToProps)(DashBoard);
