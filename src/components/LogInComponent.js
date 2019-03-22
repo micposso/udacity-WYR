@@ -10,16 +10,17 @@ import {
 } from "semantic-ui-react";
 import { GiPerspectiveDiceSixFacesRandom as Icon } from "react-icons/gi";
 
+const userOptions = [
+  {
+    value: "Jenny Hess",
+    text: "Jenny Hess",
+    image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
+  }
+];
+
 class LogIn extends Component {
   render() {
-    const userOptions = [
-      {
-        value: "Jenny Hess",
-        text: "Jenny Hess",
-        image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
-      }
-    ];
-    console.log('One part of state', this.props)
+    console.log("One part of state", this.props);
     return (
       <div className="login-form">
         <style>{`
@@ -64,14 +65,8 @@ class LogIn extends Component {
 //get user, userID, name and avartURL and push it into an array that you will pass to the Dropdown component as an options value.
 
 //problem the property users of the state it not getting through the mapStateToProps function
-function mapStateToProps({ usersReducer }) { 
-  const ids = Object.keys(usersReducer) 
-  return {
-    id: ids,
-    text: ids.name,
-    value: ids.name,
-    image: ids.avatar
-  };
+function mapStateToProps({ usersReducer }) {
+  return {};
 }
 
-export default connect(mapStateToProps)(LogIn)
+export default connect(mapStateToProps)(LogIn);
