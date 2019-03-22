@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Grid } from 'semantic-ui-react'
+import '../css/app.css'
 import LogIn from './LogInComponent'
 import DashBoard from './DashBoardComponent'
 import { handleInitialData } from '../actions/shared'

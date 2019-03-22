@@ -10,23 +10,12 @@ import {
 } from "semantic-ui-react";
 import { GiPerspectiveDiceSixFacesRandom as Icon } from "react-icons/gi";
 
-const styles = {
-  widths: {
-    mainContainer: 450,
-    icon: 200
-  },
-  spacing: {
-    dropDown: 5
-  }
-};
-
 class LogIn extends Component {
   render() {
     const userOptions = [
       {
-        key: "Jenny Hess",
-        text: "Jenny Hess",
         value: "Jenny Hess",
+        text: "Jenny Hess",
         image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
       }
     ];
@@ -45,7 +34,7 @@ class LogIn extends Component {
           style={{ height: "100%" }}
           verticalAlign="middle"
         >
-          <Grid.Column style={{ maxWidth: `${styles.widths.mainContainer}` }}>
+          <Grid.Column>
             <Form size="large">
               <Segment stacked>
                 <div>
@@ -59,7 +48,6 @@ class LogIn extends Component {
                   fluid
                   selection
                   options={userOptions}
-                  style={{ marginBottom: `${styles.spacing.dropDown}%` }}
                 />
                 <Button color="orange" fluid size="large">
                   Login
