@@ -8,6 +8,7 @@ import LogIn from "./LogInComponent";
 import DashBoard from "./DashBoardComponent";
 import Questions from './QuestionsComponent'
 import PollResults from './PollResultsComponent'
+import LeaderBoard from './LeaderBoardComponent'
 
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
         <Navigation />
         <Grid>
           <Grid columns={4}>
+            <LeaderBoard />
             <PollResults />
             <Questions />
             <DashBoard />
