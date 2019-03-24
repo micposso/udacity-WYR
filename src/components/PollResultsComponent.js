@@ -13,8 +13,8 @@ import {
 } from "semantic-ui-react";
 
 class Questions extends Component {
-  state = {}
-  handleChange = (e, { value }) => this.setState({ value })
+  state = {};
+  handleChange = (e, { value }) => this.setState({ value });
 
   render() {
     return (
@@ -27,12 +27,12 @@ class Questions extends Component {
             <Header as="h3">Results</Header>
             <Divider />
             <Segment>
-            <p>Question One</p>
-            <Progress percent={this.state.percent} indicating />
+              <p>Question One</p>
+              <Progress color="green" percent={this.state.percent} indicating />
             </Segment>
             <Segment>
-            <p>Question Two</p>
-            <Progress percent={this.state.percent} indicating />
+              <p>Question Two</p>
+              <Progress color="green" percent={this.state.percent} indicating />
             </Segment>
             <Button fluid color="orange">
               Submit

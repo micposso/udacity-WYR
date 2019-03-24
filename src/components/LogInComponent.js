@@ -8,7 +8,7 @@ import {
   Segment,
   Dropdown
 } from "semantic-ui-react";
-import { GiPerspectiveDiceSixFacesRandom as Icon } from "react-icons/gi";
+import { GiPerspectiveDiceSixFacesRandom as Dice } from "react-icons/gi";
 
 const userOptions = [
   {
@@ -49,7 +49,7 @@ class LogIn extends Component {
             <Form size="large">
               <Segment stacked>
                 <div>
-                  <Icon size={60} color="orange" />
+                  <Dice size={60} color="orange" />
                 </div>
                 <Header as="h2" color="orange" textAlign="center">
                   The Questions Game
