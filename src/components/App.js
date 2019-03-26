@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Grid, Container } from "semantic-ui-react";
 import { handleInitialData } from "../actions/shared";
 import "../css/app.css";
-import Navigation from "./NavigationComponent";
 import LogIn from "./LogInComponent";
-import DashBoard from "./DashBoardComponent";
-import Questions from './QuestionsComponent'
-import PollResults from './PollResultsComponent'
-
 
 class App extends Component {
   componentDidMount() {
@@ -16,17 +10,13 @@ class App extends Component {
   }
   render() {
     return (
-      <Container textAlign="center" verticalAlign="middle">
-        <Navigation />
-        <Grid>
-          <Grid columns={4}>
-            <PollResults />
-            <Questions />
-            <DashBoard />
+      <div className="container" textAlign="center" verticalAlign="middle">
+        <div class="ui grid">
+          <div class="four wide column">
             <LogIn />
-          </Grid>
-        </Grid>
-      </Container>
+          </div>
+        </div>
+      </div>
     );
   }
 }

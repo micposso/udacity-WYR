@@ -1,72 +1,35 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {
-  Button,
-  Form,
-  Grid,
-  Header,
-  Segment,
-  Dropdown
-} from "semantic-ui-react";
 import { GiPerspectiveDiceSixFacesRandom as Icon } from "react-icons/gi";
 
-const userOptions = [
-  {
-    value: "Jenny Hess",
-    text: "Jenny Hess",
-    image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
-  },
-  {
-    value: "Lora Smith",
-    text: "Lora Smith",
-    image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
-  },
-  {
-    value: "Rene Tout",
-    text: "Rene Tout",
-    image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
-  }
-];
 
 class LogIn extends Component {
   render() {
-    console.log("One part of state", this.props);
     return (
-      <div className="login-form">
-        <style>{`
-          body > div,
-          body > div > div,
-          body > div > div > div.login-form {
-            height: 100%;
-          }
-        `}</style>
-        <Grid
+        <div
           textAlign="center"
           style={{ height: "100%" }}
           verticalAlign="middle"
         >
-          <Grid.Column>
-            <Form size="large">
-              <Segment stacked>
+          <div>
+            <form size="large">
+              <div stacked>
                 <div>
                   <Icon size={60} color="orange" />
                 </div>
-                <Header as="h2" color="orange" textAlign="center">
+                <div as="h2" color="orange" textAlign="center">
                   The Questions Game
-                </Header>
-                <Dropdown
-                  placeholder="Select Friend"
-                  fluid
-                  selection
-                  options={userOptions}
-                />
-                <Button color="orange" fluid size="large">
-                  Login
-                </Button>
-              </Segment>
-            </Form>
-          </Grid.Column>
-        </Grid>
+                </div>
+                <select placeholder="Select Friend">
+                  <option value="volvo">Volvo</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+                </select>
+                <button color="orange">Submit</button>
+                </div>
+            </form>
+        </div>
       </div>
     );
   }
