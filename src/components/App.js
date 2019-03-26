@@ -10,11 +10,9 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="container" textAlign="center" verticalAlign="middle">
-        <div class="ui grid">
-          <div class="four wide column">
+      <div className="ui middle aligned center aligned grid">
+        <div className="column">
             <LogIn />
-          </div>
         </div>
       </div>
     );
