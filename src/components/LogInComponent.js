@@ -10,27 +10,9 @@ import {
 } from "semantic-ui-react";
 import { GiPerspectiveDiceSixFacesRandom as Dice } from "react-icons/gi";
 
-const userOptions = [
-  {
-    value: "Jenny Hess",
-    text: "Jenny Hess",
-    image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
-  },
-  {
-    value: "Lora Smith",
-    text: "Lora Smith",
-    image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
-  },
-  {
-    value: "Rene Tout",
-    text: "Rene Tout",
-    image: { avatar: true, src: "/images/avatar/small/jenny.jpg" }
-  }
-];
-
 class LogIn extends Component {
   render() {
-    console.log("One part of state", this.props);
+    console.log("Component props", this.props);
     return (
       <div className="login-form">
         <style>{`
@@ -43,7 +25,7 @@ class LogIn extends Component {
         <Grid
           textAlign="center"
           style={{ height: "100%" }}
-          verticalAlign="middle"
+          verticalalign="middle"
         >
           <Grid.Column>
             <Form size="large">
@@ -58,7 +40,7 @@ class LogIn extends Component {
                   placeholder="Select Friend"
                   fluid
                   selection
-                  options={userOptions}
+                  options={this.props.users}
                 />
                 <Button color="orange" fluid size="large">
                   Login
@@ -72,11 +54,20 @@ class LogIn extends Component {
   }
 }
 
-//get user, userID, name and avartURL and push it into an array that you will pass to the Dropdown component as an options value.
-
-//problem the property users of the state it not getting through the mapStateToProps function
-function mapStateToProps({ usersReducer }) {
-  return {};
+function mapStateToProps({ usersReducer, authedUsersReducer }) {
+  var usersArray = [];
+  Object.entries(usersReducer).forEach(([key, value]) =>
+    usersArray.push({
+      key: value.id,
+      text: value.name,
+      value: value.name,
+      image: value.avatar
+    })
+  );
+  return {
+    users: usersArray,
+    authedUsersReducer
+  };
 }
 
 export default connect(mapStateToProps)(LogIn);
